@@ -1,6 +1,7 @@
 function getComponent() {
   // 今回`webpackChunkName`に`lodash`を指定しているため
   // バンドルファイル名は`vendors~lodash.bundle.js`になる
+  // `import()`の書き方はこちらを参照 https://webpack.js.org/api/module-methods/#import-
   return import(/* webpackChunkName: "lodash" */ 'lodash')
     .then(_ => {
       console.log('import lodash');
